@@ -1,6 +1,3 @@
-# OTMql4Fix
-## Open Trading Metaquotes4 FIX Bridge
-
 ### OTMql4Fix - Open Trading Metaquotes4 FIX Bridge
 https://github.com/OpenTrading/OTMql4Fix/
 
