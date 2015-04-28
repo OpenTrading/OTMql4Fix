@@ -1,7 +1,24 @@
-from fix_parser import *
-from fix_fields import *
+# -*-mode: python; py-indent-offset: 4; indent-tabs-mode: nil; encoding: utf-8-dos; coding: utf-8 -*-
 
-p = FixParser(b"fix.4.4.xml", PARSER_FLAG_CHECK_ALL)
+# This code is taken from
+# https://github.com/dmitryme/fix_parser/
+
+import sys, os
+from fix_fields import *
+from fix_parser import *
+
+import OTMql427
+pDir = os.path.dirname(OTMql427.__file__)
+pFile = b"fix.4.4.xml"
+if pDir:
+    pDir = os.path.join(os.path.dirname(pDir), 'etc', 'fix_descr')
+    assert os.path.isdir(pDir), \
+        "Installation error: cannot find the directory " +pDir
+    pFile = os.path.join(bytes(pDir), pFile)
+    
+p = FixParser(pFile, PARSER_FLAG_CHECK_ALL)
+del pDir, pFile, OTMql427
+
 print("PROT VERSION = {0}".format(p.getProtocolVer()))
 # create Exec Report
 m = p.createMsg("8")

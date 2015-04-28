@@ -19,9 +19,9 @@ if platform.system() == 'Windows':
    try:
       lib = cdll.LoadLibrary(pFile)
    except Exception, e:
-      sts.stderr.write("Python cannot load your " +pFile +".dll - make sure libxml2.dll is in c:\\windows\\system32"+"\n")
+      # WindowsError: [Error 126] Module not found
+      sys.stderr.write("Python probably cannot load libxml2.dll needed by " +pFile +".dll - make sure libxml2.dll is in c:\\windows\\system32"+"\n")
       raise
-   
 else:
    pFile = 'libfix_parser.so'
    pFound = find_library('fix_parser')
