@@ -13,7 +13,7 @@ http://fixprotocol.org
 
 This project builds on the FIX parser:
 http://github.com/dmitryme/fix_parser
-and builds on OTMql4Py, and requires it as a pre-requisite.
+and builds on OTMql4Py, and requires that as a pre-requisite.
 There are no pre-requisites in your Python other than `ctypes`,
 which is now a part of the Python standard library. The `fix_parser`
 works under Windows and Linux, so you can use it from Mt4 under Windows,
@@ -22,8 +22,8 @@ under Windows or Linux.
 
 The current code offers only the ability to format and parse FIX messages:
 you will still need a communications mechanism to asynchronously
-send and receive these formatted messages, such as OTMql4PyAmpq:
-https://github.com/OpenTrading/OTMql4PyAmpq/
+send and receive these formatted messages, such as OTMql4Fix:
+https://github.com/OpenTrading/OTMql4Fix/
 
 **This is a work in progress - a developers' pre-release version.**
 
@@ -73,5 +73,24 @@ the folder MQL4 over the MQL4 folder of your Metatrader installation. It will
 not overwrite any Mt4 system files.
 
 You will then need to copy the required DLLs from `lib/windows-x86`
-into your windows system folder (e.g. `c:\windows\system32`)
+into your Windows system folder (e.g. `c:\windows\system32`).
+You may get away with copying them to any directory that is in your
+Windows `PATH` environment variable, but your mileage may vary.
+
+### Testing
+
+Tests are yet to be written, but look at the example.py file in the
+`MQL4/Python/OTMql427` directory.
+
+
+### Project
+
+Please file any bugs in the issue tracker:
+https://github.com/OpenTrading/OTMql4Fix/issues
+
+Use the Wiki to start topics for discussion:
+https://github.com/OpenTrading/OTMql4Fix/wiki
+It's better to use the wiki for knowledge capture, and then we can pull
+the important pages back into the documentation in the share/doc directory.
+You will need to be signed into github.com to see or edit in the wiki.
 

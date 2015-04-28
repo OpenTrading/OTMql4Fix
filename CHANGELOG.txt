@@ -1,3 +1,8 @@
+commit eda23d6a8bfc7e6260ac1f186ff1819ee02f0b47
+Date:   Tue Apr 28 10:50:40 2015 +0300
+
+    Added the compiled dlls from fix_parser.
+
 commit c6c0bbc6c00e934893ee6dab5b9ba84bbe566242
 Date:   Thu Apr 16 20:30:40 2015 +0300
 
