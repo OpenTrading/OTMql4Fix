@@ -1,3 +1,9 @@
+commit eb4a65beb3cec7ca05ac186061adaec093f5e332
+Date:   Tue Apr 28 16:34:16 2015 +0300
+
+    Included the compiled lib/linux-x86/libfix_parser.so
+    in case people wanted to run clients under Linux.
+
 commit 4e533ec6d449bb27215ca2663490495c48722846
 Date:   Tue Apr 28 11:57:26 2015 +0300
 
